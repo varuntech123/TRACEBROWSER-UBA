@@ -80,9 +80,3 @@ Dashboard Access: Open http://127.0.0.1:5000 in your preferred browser.
 1 = Open Chrome and navigate to chrome://extensions/.
 2 = Enable Developer Mode (top right).
 3 = Click Load Unpacked and select the uba_chrome_extension folder.
-
-<img width="1852" height="973" alt="s1" src="https://github.com/user-attachments/assets/f00a1d48-0ecb-4519-9c1a-7f61983c2d2b" />
-<img width="1868" height="645" alt="s2" src="https://github.com/user-attachments/assets/71d6c725-a3b2-4808-9559-94a4f321fd97" />
-<img width="1878" height="747" alt="s3" src="https://github.com/user-attachments/assets/e8518ebc-2b02-45fa-8607-154b436b5f4b" />
-<img width="1877" height="613" alt="s4" src="https://github.com/user-attachments/assets/f7c08953-2fdf-43d8-9e0e-bcf9a7402e83" />
-<img width="1865" height="567" alt="s5" src="https://github.com/user-attachments/assets/112be816-6711-4ce9-96a9-4f24817a5886" />
