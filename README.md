@@ -1,155 +1,80 @@
-🛡️ TRACEBROWSE – Browser-Based User Behavior Analytics (UBA)
+# 🛡️ TRACEBROWSE
+### **Browser-Based User Behavior Analytics (UBA) & Forensic Engine**
 
-TRACEBROWSE is a browser-centric User Behavior Analytics (UBA) and forensic monitoring platform designed to provide real-time visibility into internal browsing activity.
-It helps security teams and researchers detect risky behavior, login attempts, and build accurate forensic timelines for SOC, VAPT, and insider-threat use cases.
+TRACEBROWSE is a professional-grade User Behavior Analytics (UBA) and forensic monitoring platform designed to provide real-time visibility into internal browsing activity. It helps security teams and researchers detect risky behavior, identify unauthorized login attempts, and build accurate forensic timelines for SOC, VAPT, and insider-threat investigations.
 
-🎯 Project Objective
 
-The primary goal of TRACEBROWSE is to:
 
-Monitor live browser activity
+---
 
-Detect security-relevant behavior
+## 🎯 Project Objective
+The primary goal of **TRACEBROWSE** is to demonstrate how lightweight browser instrumentation can support enterprise security:
+- **Monitor** live browser activity across multiple tabs.
+- **Detect** security-relevant behavior and sensitive page access.
+- **Provide** a structured forensic timeline for incident response.
+- **Ethics-First:** Built strictly for authorized internal monitoring and educational research.
 
-Provide a clear forensic timeline
+## 🚀 Key Features
 
-Demonstrate how lightweight browser instrumentation can support SOC and security investigations
+- **Real-Time Activity Stream:** Captures live page titles and full URLs with 0% latency.
+- **Intelligence-Driven Classification:** Automatically categorizes events into:
+    - 🟢 **NORMAL:** Routine business browsing.
+    - 🟡 **WARNING:** Access to VAPT tools or vulnerable platforms.
+    - 🔴 **LOGIN:** Detection of authentication portals and sensitive gateways.
+- **SOC-Style Dashboard:** Analyst-friendly Dark UI featuring real-time statistics and AJAX polling.
+- **Forensic URL Tracking:** Full reconstruction of a user’s browsing path during a security audit.
+- **Noise Filtering:** Automatically excludes internal dashboard traffic to keep logs clean and actionable.
+- **Smart UI Filters:** Sidebar logic to isolate Login pages, Media activity, or Security searches.
 
-This project is built strictly for educational, research, and authorized internal monitoring purposes.
 
-🚀 Key Features
 
-Real-Time Browser Activity Monitoring
-Captures live page titles and full URLs from active browser tabs.
+## 🏗️ Tech Stack
 
-Login Page & Sensitive Activity Detection
-Automatically identifies login pages and security-related browsing patterns.
+### **Backend**
+- **Python (Flask):** Robust REST API for data ingestion and dashboard serving.
+- **Flask-CORS:** Secure cross-origin communication between browser and server.
 
-Behavior Classification & Risk Levels
-Events are categorized into:
+### **Frontend**
+- **HTML5/CSS3:** Modern "Inter" font integration with a high-contrast Dark UI.
+- **JavaScript (jQuery/AJAX):** Asynchronous polling for real-time dashboard updates without page refresh.
 
-NORMAL
+### **Browser Instrumentation**
+- **Custom Chrome Extension:** - **Background Service Worker:** Continuous monitoring of tab states.
+    - **Extension API:** Utilizing `chrome.tabs` listeners for precise metadata capture.
 
-LOGIN
+---
 
-WARNING
+## 📦 Installation & Setup
 
-Live SOC-Style Dashboard
-Dark-mode, analyst-friendly dashboard with automatic refresh and real-time statistics.
-
-Forensic URL Tracking
-Full URL capture enables reconstruction of browsing paths during investigations.
-
-Noise Filtering
-Internal dashboard traffic and irrelevant system URLs are automatically excluded.
-
-Smart Filtering (UI)
-Quickly filter events such as login pages, media activity, or security-related searches.
-
-🛠️ Tech Stack
-
-Backend
-
-Python
-
-Flask
-
-Frontend
-
-HTML5
-
-CSS3 (Dark UI / Inter font)
-
-JavaScript (AJAX polling)
-
-Browser Instrumentation
-
-Custom Chrome Extension
-
-Background Service Worker
-
-Tab activation & update listeners
-
-Data Handling
-
-JSON-based communication
-
-Optional CSV logging for forensic review
-
-📦 Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/YourUsername/TRACEBROWSE.git
+### 1️⃣ Clone the Repository
+```bash
+git clone [https://github.com/YourUsername/TRACEBROWSE.git](https://github.com/YourUsername/TRACEBROWSE.git)
 cd TRACEBROWSE
-2️⃣ Install Python Dependencies
+
+2️⃣ Install Dependencies
 pip install -r requirements.txt
-3️⃣ Run the Backend Server
+
+3️⃣ Run the Engine
 python main.py
 
-The dashboard will be available at:
+Dashboard Access: Open http://127.0.0.1:5000 in your preferred browser.
 
-http://127.0.0.1:5000
-4️⃣ Load the Chrome Extension
+4️⃣ Load the Extension
+1 = Open Chrome and navigate to chrome://extensions/.
+2 = Enable Developer Mode (top right).
+3 = Click Load Unpacked and select the uba_chrome_extension folder.
 
-Open Chrome and navigate to:
-
-chrome://extensions/
-
-Enable Developer Mode
-
-Click Load unpacked
-
-Select the uba_chrome_extension folder
-
-Once loaded, browser activity will start appearing on the dashboard in real time.
-
-📊 Dashboard Overview
-
-The dashboard provides:
-
-A live event timeline
-
-Clear visibility into browsing behavior
-
-Highlighted login-related and security-sensitive activity
-
-A clean SOC-style monitoring experience
+📸 Dashboard Overview
+The TRACEBROWSE dashboard acts as a centralized Security Operations Center (SOC) view, highlighting high-risk behavior in real-time.
 
 🔐 Security & Privacy Notes
+Metadata Only: TRACEBROWSE focuses on forensics. It does NOT capture passwords, keystrokes, form inputs, or personal private data.
 
-TRACEBROWSE does NOT capture:
-
-Passwords
-
-Keystrokes
-
-Form inputs
-
-Personal data
-
-Only metadata (page title, URL, timestamp) is collected.
-
-Intended for authorized environments only.
+Compliance: Intended for use in authorized corporate environments or local research labs only.
 
 📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This project is licensed under the MIT License.
-See the LICENSE file for details.
+Developed with 🛡️ by Varun Rajput Cybersecurity | VAPT | Security Tool Development 🇮🇳 Bhopal, India
 
-👨‍💻 Author
 
-Varun Rajput 🇮🇳
-Cybersecurity | VAPT | Security Tool Development
-
-🖼️ Screenshots
-
-(Add dashboard and live monitoring screenshots here)
-
-✅ FINAL NOTE
-
-This project demonstrates:
-
-Practical understanding of User Behavior Analytics
-
-Real-time monitoring concepts used in SOC environments
-
-Secure and ethical browser-based instrumentation
